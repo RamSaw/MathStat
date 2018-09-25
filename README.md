@@ -1,2 +1,2 @@
 # MathStat
-Repository for mathematic statistics homeworks
+Repository for mathematical statistics homeworks
