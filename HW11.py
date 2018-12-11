@@ -19,9 +19,9 @@ a < 0
 c * 2 * e^(0) =  1 <=> c = 1 / 2
 """
 
-a_to_set_by_user = 1
+a_to_set_by_user = 5
 a = max(a_to_set_by_user, 0)
-c = 1 / (2 * np.e ** (-a) + a)
+c = 1 / (2 * (np.e ** (-a) + a))
 
 
 def f(x):
