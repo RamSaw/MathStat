@@ -92,14 +92,17 @@ def get_new_value_discrete():
 def draw_reverse_function_method():
     precision = 1
     conversion = "%." + str(precision) + "f"
-    n = 1000
+    n = 100000
     values = defaultdict(int)
     for i in range(n):
-        values[conversion % get_new_value_reverse_functions_method()] += 1
-    data_x = values.keys()
-    data_y = values.values()
+        values[int(get_new_value_reverse_functions_method())] += 1
+    data_x = []
+    data_y = []
+    for key in sorted(values):
+        data_x.append(key)
+        data_y.append(values[key])
     plt.subplot(211)
-    plt.title("Reverse functions method")
+    plt.title("Reverse functions method, a = " + str(a_to_set_by_user))
     plt.plot(data_x, data_y)
     plt.ylabel("times")
     plt.xlabel("value")
@@ -108,14 +111,17 @@ def draw_reverse_function_method():
 def draw_discrete_method():
     precision = 1
     conversion = "%." + str(precision) + "f"
-    n = 1000
+    n = 100000
     values = defaultdict(int)
     for i in range(n):
-        values[conversion % get_new_value_discrete()] += 1
-    data_x = values.keys()
-    data_y = values.values()
+        values[int(get_new_value_discrete())] += 1
+    data_x = []
+    data_y = []
+    for key in sorted(values):
+        data_x.append(key)
+        data_y.append(values[key])
     plt.subplot(212)
-    plt.title("Discrete decomposition method")
+    plt.title("Discrete decomposition method, a = " + str(a_to_set_by_user))
     plt.plot(data_x, data_y)
     plt.ylabel("times")
     plt.xlabel("value")
